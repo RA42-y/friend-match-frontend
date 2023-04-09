@@ -5,12 +5,12 @@
           v-model="editUser.currentValue"
           :name="editUser.editKey"
           :label="editUser.editName"
-          :placeholder="`请输入${editUser.editName}`"
+          :placeholder="`Please enter ${editUser.editName}`"
       />
     </van-cell-group>
     <div style="margin: 16px;">
       <van-button round block type="primary" native-type="submit">
-        提交
+        Submit
       </van-button>
     </div>
   </van-form>

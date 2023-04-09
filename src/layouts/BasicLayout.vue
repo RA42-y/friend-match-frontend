@@ -18,9 +18,9 @@
 <!--  <router-link to="/team">team</router-link>-->
 
   <van-tabbar route @change="onChange">
-    <van-tabbar-item to="/" icon="home-o" name="index">主页</van-tabbar-item>
-    <van-tabbar-item to="/team" icon="search" name="team">队伍</van-tabbar-item>
-    <van-tabbar-item to="/user" icon="friends-o" name="user">个人</van-tabbar-item>
+    <van-tabbar-item to="/" icon="home-o" name="index">Home</van-tabbar-item>
+    <van-tabbar-item to="/team" icon="friends-o" name="team">Team</van-tabbar-item>
+    <van-tabbar-item to="/user" icon="user-circle-o" name="user">User</van-tabbar-item>
   </van-tabbar>
 
 
@@ -34,7 +34,7 @@ import routes from "../config/route";
 import {useRouter} from "vue-router";
 const router = useRouter();
 
-const DEFAULT_TITLE = '伙伴匹配';
+const DEFAULT_TITLE = 'Friend Match';
 const title = ref(DEFAULT_TITLE);
 
 /**

@@ -1,14 +1,14 @@
 <template>
   <div id="teamPage">
-    <van-search v-model="searchText" placeholder="搜索队伍" @search="onSearch"/>
+    <van-search v-model="searchText" placeholder="Search Team" @search="onSearch"/>
     <van-tabs v-model:active="active" @change="onTabChange">
-      <van-tab title="公开" name="public" />
-      <van-tab title="加密" name="private" />
+      <van-tab title="public" name="public" />
+      <van-tab title="private" name="private" />
     </van-tabs>
     <div style="margin-bottom: 16px" />
     <van-button type="primary" icon="plus" class="add-button" @click="doJoinTeam"></van-button>
     <team-card-list :team-list="teamList"/>
-    <van-empty v-if="teamList?.length < 1" description="数据为空"/>
+    <van-empty v-if="teamList?.length < 1" description="No data"/>
   </div>
 
 </template>

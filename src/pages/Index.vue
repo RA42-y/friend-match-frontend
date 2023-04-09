@@ -1,11 +1,11 @@
 <template>
-  <van-cell center title="心动模式">
+  <van-cell center title="Matching Mode">
     <template #right-icon>
       <van-switch v-model="isMatchMode" size="24" />
     </template>
   </van-cell>
   <user-card-list :user-list="userList" :loading="loading"/>
-  <van-empty v-if="!userList || userList.length < 1" description="数据为空"/>
+  <van-empty v-if="!userList || userList.length < 1" description="No data"/>
 </template>
 
 <script setup lang="ts">

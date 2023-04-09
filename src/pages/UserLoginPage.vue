@@ -4,22 +4,22 @@
       <van-field
           v-model="userAccount"
           name="userAccount"
-          label="账号"
-          placeholder="请输入账号"
-          :rules="[{ required: true, message: '请填写账号' }]"
+          label="Account"
+          placeholder="Please enter your account"
+          :rules="[{ required: true, message: 'Please fill in your account' }]"
       />
       <van-field
           v-model="userPassword"
           type="password"
           name="userPassword"
-          label="密码"
-          placeholder="请输入密码"
-          :rules="[{ required: true, message: '请填写密码' }]"
+          label="Password"
+          placeholder="Please enter your password"
+          :rules="[{ required: true, message: 'Please fill in your password' }]"
       />
     </van-cell-group>
     <div style="margin: 16px;">
       <van-button round block type="primary" native-type="submit">
-        提交
+        Submit
       </van-button>
     </div>
   </van-form>

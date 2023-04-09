@@ -3,13 +3,13 @@
     <van-search
         v-model="searchText"
         show-action
-        placeholder="请输入搜索标签"
+        placeholder="Please enter a tag to search"
         @search="onSearch"
         @cancel="onCancel"
     />
   </form>
-  <van-divider content-position="left">已选择标签</van-divider>
-  <div v-if="activeIds.length === 0">请选择标签</div>
+  <van-divider content-position="left">Selected Tags</van-divider>
+  <div v-if="activeIds.length === 0">Please select tags</div>
 
   <van-row gutter="16" style="padding: 0 16px">
     <van-col v-for="tag in activeIds">
@@ -20,7 +20,7 @@
   </van-row>
 
 
-  <van-divider content-position="left">选择标签</van-divider>
+  <van-divider content-position="left">Select Tag</van-divider>
 
   <van-tree-select
       v-model:active-id="activeIds"
@@ -28,7 +28,7 @@
       :items="tagList"
   />
   <div style="padding: 12px;">
-    <van-button block type="primary" @click="doSearchResult">搜索</van-button>
+    <van-button block type="primary" @click="doSearchResult">Search</van-button>
   </div>
 
 
@@ -46,21 +46,31 @@ const searchText = ref('');
 
 const originTagList = [
   {
-    text: '性别',
+    text: 'Gender',
     children: [
-      {text: '男', id: '男'},
-      {text: '女', id: '女'},
+      {text: 'Male', id: 'Male'},
+      {text: 'Female', id: 'Female'},
     ],
   },
   {
-    text: '年级',
+    text: 'Specialization',
     children: [
-      {text: '大一', id: '大一'},
-      {text: '大二', id: '大二'},
-      {text: '大3', id: '大3'},
-      {text: '大4', id: '大4'},
-      {text: '大5', id: '大5aaaaaa'},
-      {text: '大6', id: '大6aaaaaa'},
+      {text: 'Frontend', id: 'Frontend'},
+      {text: 'Backend', id: 'Backend'},
+      {text: 'Fullstack', id: 'Fullstack'},
+      {text: 'Cloud', id: 'Cloud'},
+      {text: 'DevOps', id: 'DevOps'},
+    ],
+  },
+  {
+    text: 'Language',
+    children: [
+      {text: 'Java', id: 'Java'},
+      {text: 'Python', id: 'Python'},
+      {text: 'C++', id: 'C++'},
+      {text: 'PHP', id: 'PHP'},
+      {text: 'Swift', id: 'Swift'},
+      {text: 'Kotlin', id: 'Kotlin'},
     ],
   },
 ];

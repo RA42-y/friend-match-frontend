@@ -1,5 +1,5 @@
 export const teamStatusEnum = {
-    0: '公开',
-    1: '私有',
-    2: '加密',
+    0: 'public',
+    1: 'private',
+    2: 'encrypted',
 }
